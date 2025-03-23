@@ -4,6 +4,8 @@
     --cor--primeria: #2A2438;
     --cor--secundaria: #DBD8E3;
     --cor--terciaria: #5C5470;
+    --cor--destaque: #000000;
+    --cor--quartearia: #251F32;
 
     --fonte--primeria: "Open Sans", sans-serif;
     --fonte--secundaria: "Roboto", sans-serif;
@@ -21,11 +23,15 @@ body{
 
 header{
     background-color: var(--cor--terciaria);
-    padding: 15px;
+    padding: 1rem;
     color:  var(--cor--secundaria);
     display: flex;
     gap: 50px;
     font-size: 20px;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
 }
 
 .cabecalho__navegacao{
@@ -51,7 +57,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-radius: 15px;
+    border-radius: 1rem;
 }
 
 .conteudo__informacoes__titulo{
@@ -66,12 +72,12 @@ header{
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--fonte--primeria);
 }
 
 .conteudo__informacoes__lista, .conteudo__informacoes__paragrafo{
-    font-size: 15px;
+    font-size: 1rem;
     font-family: var(--fonte-secundaria);
 }
 
@@ -85,7 +91,7 @@ header{
 }
 
 .conteudo__informacoes__titulo__link{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--fonte--primeria);
     display: flex;
     flex-direction: column;
@@ -95,7 +101,7 @@ header{
 
 .conteudo__informacoes__imagem{
     width: 100%;
-    border: 2px solid #000000;
+    border: 2px solid var(--cor--destaque);
     border-radius: 8px;
     font-family: var(--fonte-secundaria);
 }
@@ -110,7 +116,7 @@ header{
     width: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--cor--primeria);
     background-color: var(--cor--terciaria);
     font-family: var(--fonte-secundaria);
@@ -119,4 +125,25 @@ header{
 .cabecalho__navegacao:hover{
     background-color:  var(--cor--terciaria);
     font-weight: bold;
+}
+.conteudo__informacoes__links__navegacao:hover{
+    background-color:  var(--cor--quartearia);
+    font-weight: bold;
+    color: var(--cor--destaque);
+}
+
+@media(max-width: 800px){
+    .cabecalho{
+        padding: 2% 0% 0% 15%;
+    }
+    .cabecalho__navegacao{
+        justify-content: center;
+    }
+    .conteudo{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .conteudo__informacoes{
+        width: auto;
+    }
 }
